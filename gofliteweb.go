@@ -111,6 +111,11 @@ func WaveHandler(w http.ResponseWriter, r *http.Request) {
 
 	log.Printf("wavegen: %s\t%s\t%s", clientIP, voice, text)
 
+	if voice == "Default" {
+		// Empty voice makes goflite choose the default voice
+		voice = ""
+	}
+
 	wav, err := goflite.TextToWave(text, voice)
 	if err != nil {
 		log.Printf("WAVE: Could not synthesize %s: %s", voice, text)
