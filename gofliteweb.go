@@ -73,6 +73,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	{{range .Voices}}
 	<option value="{{.}}">{{.}}</option>
 	{{end}}
+    <option value="Default">Default</option>
   </select> <br /> <br />
   <textarea rows=3 cols=80 id="textarea" name="text">A whole joy was reaping, but they've gone south. Go fetch azure mike!</textarea>
   <br /> <br />
