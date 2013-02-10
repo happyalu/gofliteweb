@@ -123,7 +123,7 @@ func WaveHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = wav.DumpRIFF(w)
+	err = wav.EncodeRIFF(w)
 	if err != nil {
 		log.Println("Could not write waveform")
 	}
