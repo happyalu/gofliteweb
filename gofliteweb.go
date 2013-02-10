@@ -113,8 +113,9 @@ func WaveHandler(w http.ResponseWriter, r *http.Request) {
 
 	wav, err := goflite.TextToWave(text, voice)
 	if err != nil {
-		log.Println("WAVE: Could not synthesize %s: %s", voice, text)
+		log.Printf("WAVE: Could not synthesize %s: %s", voice, text)
 		http.Error(w, "Could not Synthesize Speech", 500)
+		return
 	}
 
 	err = wav.DumpRIFF(w)
