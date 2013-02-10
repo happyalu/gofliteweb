@@ -82,7 +82,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
   <br />
   <br />
   <br />
-  <small>Powered by <a href="www.github.com/happyalu/goflite">GoFlite</a>.</small>
+  <small>Powered by <a href="http://www.github.com/happyalu/goflite">GoFlite</a>.</small>
   </body>
 </html>`
 
