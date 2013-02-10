@@ -2,7 +2,9 @@
 Flite Synthesis Web Demo
 ========================
 
-GoFliteWeb is an example application to demonstrate how the github.com/happyalu/goflite package can be used. 
+GoFliteWeb is an example application to demonstrate how the
+http://www.github.com/happyalu/goflite package can be used to convert
+Text to Speech in Go.
 
 Usage
 =====
