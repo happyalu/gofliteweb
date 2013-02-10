@@ -8,6 +8,7 @@ Usage
 =====
 
 ::
+
  go build
  ./gofliteweb -addr localhost:8080 -voxpath /path/to/flitevox-files
 
