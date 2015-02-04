@@ -67,8 +67,8 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 </head>
 <body>
   <h1>Flite Synthesis Demo</h1>
-  
-  Choose Voice: 
+
+  Choose Voice:
   <select id="voice">
 	{{range .Voices}}
 	<option value="{{.}}">{{.}}</option>
