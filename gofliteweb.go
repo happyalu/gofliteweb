@@ -63,6 +63,13 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		audio.setAttribute('src', '/wav?text=' + encodeURIComponent(text) + '&voice=' + encodeURIComponent(voice));
 		audio.play();
 	}
+	function download_tts() {
+		var text = document.getElementById('textarea').value;
+		var voice = document.getElementById('voice').options[document.getElementById('voice').selectedIndex].text;
+		var downloader = document.getElementById('downloader');
+		downloader.setAttribute('href', '/wav?text=' + encodeURIComponent(text) + '&voice=' + encodeURIComponent(voice));
+		downloader.click();
+	}
   </script>
 </head>
 <body>
@@ -77,8 +84,10 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
   </select> <br /> <br />
   <textarea rows=3 cols=80 id="textarea" name="text">A whole joy was reaping, but they've gone south. Go fetch azure mike!</textarea>
   <br /> <br />
-  <input type="submit" value="Speak!" onclick="play_tts();"> <br />
+  <input type="submit" value="Speak!" onclick="play_tts();"> &nbsp;&nbsp;&nbsp;
+  <input type="submit" value="Download!" onclick="download_tts();"> <br />
   <audio id="player"></audio>
+  <a id="downloader" href="" download="flite.wav" target="_blank" style="display:none;"></a>
   <br />
   <br />
   <br />
